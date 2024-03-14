@@ -3,8 +3,10 @@ import vue from '@vitejs/plugin-vue';
 
 import * as path from 'path';
 
+// npm i -D unplugin-auto-import
 import AutoImport from 'unplugin-auto-import/vite';
 
+// npm i -D @vue-macros/reactivity-transform
 import ReactivityTransform from '@vue-macros/reactivity-transform/vite';
 
 // https://vitejs.dev/config/
