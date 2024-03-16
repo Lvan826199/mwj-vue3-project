@@ -38,7 +38,7 @@ export const useUserStore = defineStore('user', () => {
 					"path":"/",
 					"children":[],
 					"component":"dashboard/index",
-					"icon":"Setting",
+					"icon":"Odometer",
 					"isShow":true,
 					"isShowBreadcrumb":"true",
 					"sort":1,
@@ -47,11 +47,129 @@ export const useUserStore = defineStore('user', () => {
 					"permList":[],
 					"rediret":"",
 					"meta":{
-						"icon":"Setting",
+						"icon":"Odometer",
 						"isShow":true,
 						"isShowBreadcrumb":"true",
 						"sort":1,
 						"title":"首页"
+
+					}
+			},
+			{"menuId":2,
+					"parentId":0,
+					"parentName":"",
+					"path":"/system",
+					"children":[
+						{
+							"menuId":4,
+							"parentId":2,
+							"parentName":"",
+							"path":"personal-center",
+							"children":[],
+							"component":"system/personal-center/index",
+							"icon":"Avatar",
+							"isShow":true,
+							"isShowBreadcrumb":"true",
+							"sort":1,
+							"title":"个人中心",
+							"isHasPerm":true,
+							"permList":[],
+							"rediret":"",
+							"meta":{
+								"icon":"Avatar",
+								"isShow":true,
+								"isShowBreadcrumb":"true",
+								"sort":1,
+								"title":"个人中心"
+
+								}
+						},
+						{
+							"menuId":5,
+							"parentId":2,
+							"parentName":"",
+							"path":"user",
+							"children":[],
+							"component":"system/user/index",
+							"icon":"User",
+							"isShow":true,
+							"isShowBreadcrumb":"true",
+							"sort":2,
+							"title":"用户管理",
+							"isHasPerm":true,
+							"permList":[],
+							"rediret":"",
+							"meta":{
+								"icon":"User",
+								"isShow":true,
+								"isShowBreadcrumb":"true",
+								"sort":2,
+								"title":"用户管理"
+
+								}
+						},
+					],
+					"component":"",
+					"icon":"Setting",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":2,
+					"title":"系统管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Setting",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":2,
+						"title":"系统管理"
+
+					}
+			},
+      {"menuId":19,
+					"parentId":0,
+					"parentName":"",
+					"path":"/mall",
+					"children":[],
+					"component":"",
+					"icon":"ColdDrink",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":3,
+					"title":"商城管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Odometer",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":3,
+						"title":"商城管理"
+
+					}
+			},
+      {"menuId":12,
+					"parentId":0,
+					"parentName":"",
+					"path":"/wx",
+					"children":[],
+					"component":"",
+					"icon":"GoldMedal",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":4,
+					"title":"微信公众号管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Odometer",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":4,
+						"title":"微信公众号管理"
 
 					}
 			},

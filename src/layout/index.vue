@@ -21,9 +21,9 @@
       <app-main class="flex-1 app-main" :height="appMainHeight + 'px'" :width="appMainWidth + 'px'" />
     </div>
   </div>
-  <!-- <div v-if="!isLogin || (isLogin && $route.meta.isParentView)" class="h-full"> -->
-  <!-- <router-view /> -->
-  <!-- </div> -->
+   <div v-if="!isLogin || (isLogin && $route.meta.isParentView)" class="h-full">
+   <router-view />
+   </div>
 </template>
 
 <script setup>
@@ -33,8 +33,8 @@ import appMain from './components/app-main.vue';
 import tabsView from './components/tabs-view.vue';
 const { proxy } = getCurrentInstance();
 let { isLogin } = toRefs(proxy.$store.user.useUserStore());
-// let { isShowMenu } = toRefs(proxy.$store.settings.useSettingsStore());
-let isShowMenu = ref(1);
+let { isShowMenu } = toRefs(proxy.$store.settings.useSettingsStore());
+// let isShowMenu = ref(1);
 let appMainWidth = ref(0);
 let appMainHeight = ref(0);
 
