@@ -19,10 +19,8 @@ export const useUserStore = defineStore('user', () => {
 
     isLogin.value = true;
     console.log('isLogin.value', isLogin.value);
-    let fixedData = {
-      "isLogin":true,
-	"tokenObj":{},
-	"userObj":{
+
+    userObj.value = {
 		"avatarUrl":"",
 		"createTime":"2020-08-22 15:01:55",
 		"email":"826199528@qq.com",
@@ -34,11 +32,33 @@ export const useUserStore = defineStore('user', () => {
 		"userId":1,
 		"username":"admin",
 		"permissionTreeList":[
-		{"menuId":1,"parentId":0,"parentName":"","title":"首页","icon":"Setting","path":"/mall","children":[],"component":"dashboard/index","isHasPerm":true,"isShow":true,"isShowBreadcrumb":"true","permList":[]},
+			{"menuId":1,
+					"parentId":0,
+					"parentName":"",
+					"path":"/",
+					"children":[],
+					"component":"dashboard/index",
+					"icon":"Setting",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":1,
+					"title":"首页",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Setting",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":1,
+						"title":"首页"
+
+					}
+			},
+
 		]
-	},
-    }
-    userObj.value = fixedData.userObj;
+}
+
     console.log('userObj', userObj.value);
     if (isLogin.value) {
       return;
