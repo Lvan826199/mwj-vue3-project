@@ -19,10 +19,8 @@ export const useUserStore = defineStore('user', () => {
 
     isLogin.value = true;
     console.log('isLogin.value', isLogin.value);
-    let fixedData = {
-      "isLogin":true,
-	"tokenObj":{},
-	"userObj":{
+
+    userObj.value = {
 		"avatarUrl":"",
 		"createTime":"2020-08-22 15:01:55",
 		"email":"826199528@qq.com",
@@ -34,11 +32,151 @@ export const useUserStore = defineStore('user', () => {
 		"userId":1,
 		"username":"admin",
 		"permissionTreeList":[
-		{"menuId":1,"parentId":0,"parentName":"","title":"首页","icon":"Setting","path":"/mall","children":[],"component":"dashboard/index","isHasPerm":true,"isShow":true,"isShowBreadcrumb":"true","permList":[]},
+			{"menuId":1,
+					"parentId":0,
+					"parentName":"",
+					"path":"/",
+					"children":[],
+					"component":"dashboard/index",
+					"icon":"Odometer",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":1,
+					"title":"首页",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Odometer",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":1,
+						"title":"首页"
+
+					}
+			},
+			{"menuId":2,
+					"parentId":0,
+					"parentName":"",
+					"path":"/system",
+					"children":[
+						{
+							"menuId":4,
+							"parentId":2,
+							"parentName":"",
+							"path":"personal-center",
+							"children":[],
+							"component":"system/personal-center/index",
+							"icon":"Avatar",
+							"isShow":true,
+							"isShowBreadcrumb":"true",
+							"sort":1,
+							"title":"个人中心",
+							"isHasPerm":true,
+							"permList":[],
+							"rediret":"",
+							"meta":{
+								"icon":"Avatar",
+								"isShow":true,
+								"isShowBreadcrumb":"true",
+								"sort":1,
+								"title":"个人中心"
+
+								}
+						},
+						{
+							"menuId":5,
+							"parentId":2,
+							"parentName":"",
+							"path":"user",
+							"children":[],
+							"component":"system/user/index",
+							"icon":"User",
+							"isShow":true,
+							"isShowBreadcrumb":"true",
+							"sort":2,
+							"title":"用户管理",
+							"isHasPerm":true,
+							"permList":[],
+							"rediret":"",
+							"meta":{
+								"icon":"User",
+								"isShow":true,
+								"isShowBreadcrumb":"true",
+								"sort":2,
+								"title":"用户管理"
+
+								}
+						},
+					],
+					"component":"",
+					"icon":"Setting",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":2,
+					"title":"系统管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Setting",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":2,
+						"title":"系统管理"
+
+					}
+			},
+      {"menuId":19,
+					"parentId":0,
+					"parentName":"",
+					"path":"/mall",
+					"children":[],
+					"component":"",
+					"icon":"ColdDrink",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":3,
+					"title":"商城管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Odometer",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":3,
+						"title":"商城管理"
+
+					}
+			},
+      {"menuId":12,
+					"parentId":0,
+					"parentName":"",
+					"path":"/wx",
+					"children":[],
+					"component":"",
+					"icon":"GoldMedal",
+					"isShow":true,
+					"isShowBreadcrumb":"true",
+					"sort":4,
+					"title":"微信公众号管理",
+					"isHasPerm":true,
+					"permList":[],
+					"rediret":"",
+					"meta":{
+						"icon":"Odometer",
+						"isShow":true,
+						"isShowBreadcrumb":"true",
+						"sort":4,
+						"title":"微信公众号管理"
+
+					}
+			},
+
 		]
-	},
-    }
-    userObj.value = fixedData.userObj;
+}
+
     console.log('userObj', userObj.value);
     if (isLogin.value) {
       return;
